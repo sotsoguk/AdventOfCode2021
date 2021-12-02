@@ -1,47 +1,48 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <algorithm>
-#include <numeric>
-#include <unordered_set>
+/*
+Advent of Code 2021 - Day 01
+[https://adventofcode.com/2021/day/1]
 
+*/
+#include <bits/stdc++.h>
 #include "reader.hpp"
-
 
 using namespace std;
 
+std::vector<std::string> split(const std::string &str, const char &delim = ',')
+{
+    std::stringstream ss(str);
+    std::string token;
+    std::vector<std::string> toks;
+    while (std::getline(ss, token, delim))
+    {
+        toks.push_back(token);
+    }
+    return toks;
+}
+
 int main()
 {
-    // ifstream ifs("input.txt", ifstream::in);
-    // auto lines = vector<string>(read_input(ifs));
     
     // Part 1 - parse input to ints and return total value
-   
+
+    string input_file = "../../inputs/day01.txt";
+    ifstream ifs(input_file, ifstream::in);
+    auto input_lines = vector<string>(read_input(ifs));
+    vector<int> input(2, INT_MAX);
+    transform(input_lines.begin(), input_lines.end(), back_inserter(input),
+              [](const string &s)
+              { return stoi(s); });
+
     
-    
-    auto target = 30000000;
-    // inputs = 0,3,6
-    // Part 2
-    // compute partial sums, as each freq is increased by freq in each round, cyclic
-    vector<uint32_t> lut(target,-1);
-    auto last = 6;
-    lut[3] = 1;
-    lut[0] = 0;
-    for (auto i = 3;i<target; i++) {
-        // new
-        if (lut[last] == -1) {
-            lut[last] = i-1;
-            last = 0;
-        }
-        else{
-            auto d = i-1-lut[last];
-            lut[last] = i-1;
-            last = d;
-        }
+    // Part1 & Part2
+    auto it = input.begin() + 3;
+    int part1(0), part2(0);
+    for (; it != input.end(); it++)
+    {
+        part2 += (*it > *(it - 3) ? 1 : 0);
+        part1 += (*it > *(it - 1) ? 1 : 0);
     }
-    cout << last << endl;
-    
-    
-    
-    
+    cout << "Advent of Code 2021 - Day 01\n\n";
+    cout << "Part 1:\t"<< part1 << "\n" << "Part 2:\t"<<part2 << endl;
+
 }
