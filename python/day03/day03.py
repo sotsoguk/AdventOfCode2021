@@ -2,6 +2,7 @@ import os
 import time
 import cmath
 import bisect
+import string
 
 
 def main():
@@ -21,36 +22,20 @@ def main():
     num_digits = len(lines[0])
     epsilon = [0] * num_digits
     for l in lines:
-
         for i, b in enumerate(l):
-            # print(i,b)
             if b == '1':
-                # print("FOUND")
                 epsilon[num_digits-i-1] += 1
 
-    # print(epsilon)
+    eps = "".join(["1" if c > len(lines)//2 else "0" for c in epsilon])
+    gamma = eps.translate(eps.maketrans({'1': '0', '0': '1'}))
 
-    # print(epsilon)'P
-
-    eps = ""
-    gamma = ""
-    for c in epsilon:
-        if c > (len(lines)//2):
-            eps += "1"
-            gamma += "0"
-        else:
-            eps += "0"
-            gamma += "1"
-    # print(eps[::-1])
-    # print(gamma[::-1])
     part1 = int(eps[::-1], base=2) * int(gamma[::-1], base=2)
-    # convert commands to complex numbers
 
     duration = int((time.time() - start_time) * 1000000)
     inp_sort = sorted(input)
     # part2
     n = len(lines[0])
-    to_check, lo_idx, hi_idx= (1<< (n-1)), 0, len(input)
+    to_check, lo_idx, hi_idx = (1 << (n-1)), 0, len(input)
     while (lo_idx < hi_idx-1):
         mid = (lo_idx+hi_idx) // 2
         b = bisect.bisect_left(inp_sort[lo_idx:hi_idx], to_check)
@@ -65,7 +50,7 @@ def main():
     oxy = inp_sort[lo_idx]
 
     n = len(lines[0])
-    to_check, lo_idx, hi_idx= (1<< (n-1)), 0, len(input)
+    to_check, lo_idx, hi_idx = (1 << (n-1)), 0, len(input)
     while (lo_idx < hi_idx-1):
         mid = (lo_idx+hi_idx) // 2
         b = bisect.bisect_left(inp_sort[lo_idx:hi_idx], to_check)
