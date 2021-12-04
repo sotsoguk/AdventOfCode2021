@@ -10,6 +10,6 @@ This repository contains the solutions to the [Advent Of Code](https://adventofc
 | ---: | -------------------------------------------------: | ---: | ------------------------------------------------------------------------------------------------------------------------------: | ---: |
 |   01 | [Sonar Sweep](https://adventofcode.com/2021/day/1) |      | [day01.py](https://github.com/sotsoguk/AdventOfCode2021/blob/bfc404d3724aa8eff5255f8d3fe4a4f1d6ace98c/python/day01/day01.py) | [day01.cpp](https://github.com/sotsoguk/AdventOfCode2021/blob/bfc404d3724aa8eff5255f8d3fe4a4f1d6ace98c/cpp/day01/day01.cpp)     |
 |   02 |            [Dive !](https://adventofcode.com/2021/day/2)                                        |      |       [day02.py](https://github.com/sotsoguk/AdventOfCode2021/blob/bfc404d3724aa8eff5255f8d3fe4a4f1d6ace98c/python/day02/day02.py)                                                                                                                          |      |
-| 03 | | | day03.py | | 
+| 03 | [Binary Diagnostic](https://adventofcode.com/2021/day/3)| | [day03.py](https://github.com/sotsoguk/AdventOfCode2021/blob/58d49eaed5c5c6173e34b54b556fde8e395821e5/python/day03/day03.py) | | 
 | 04 | | | |
 | 05 | | | |
