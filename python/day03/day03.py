@@ -32,8 +32,8 @@ def main():
     part1 = int(eps[::-1], base=2) * int(gamma[::-1], base=2)
 
     duration = int((time.time() - start_time) * 1000000)
-    inp_sort = sorted(input)
     # part2
+    inp_sort = sorted(input)
     n = len(lines[0])
     to_check, lo_idx, hi_idx = (1 << (n-1)), 0, len(input)
     while (lo_idx < hi_idx-1):
