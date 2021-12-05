@@ -14,3 +14,8 @@ This repository contains the solutions to the [Advent Of Code](https://adventofc
 | 03 | [Binary Diagnostic](https://adventofcode.com/2021/day/3)| | [day03.py](https://github.com/sotsoguk/AdventOfCode2021/blob/58d49eaed5c5c6173e34b54b556fde8e395821e5/python/day03/day03.py) | | 
 | 04 | [Giant Squid](https://adventofcode.com/2021/day/4)| | [day04.py](https://github.com/sotsoguk/AdventOfCode2021/blob/6dc32bde011b2e3665575668c1499273fcd7f387/python/day04/day04.py) |
 | 05 | | | |
+| 06 | | | |
+| 07 | | | |
+| 08 | | | |
+| 09 | | | |
+| 10 | | | |
