@@ -1,7 +1,6 @@
 import os
 import time
-import re
-from collections import defaultdict, Counter
+from math import ceil, floor
 
 
 def main():
@@ -9,7 +8,7 @@ def main():
     print(os.getcwd())
     day = "07"
     year = "2021"
-    inputFile = f'../inputs/day{day}.txt'
+    inputFile = f'../inputs/day{day}_test.txt'
     # inputFile = f'../inputs/day{day}.txt'
 
     part1, part2 = 0, 0
@@ -25,8 +24,10 @@ def main():
     part1 = sum([abs(median-crab) for crab in inp])
 
     # part2
-    avg = int(sum(inp) / len(inp))
-    part2 = sum([abs(i-avg)*(abs(i-avg)+1)//2 for i in inp])
+    avg1 = int(floor(sum(inp) / len(inp)))
+    avg2 = int(ceil(sum(inp) / len(inp)))
+    part2 = min(sum([abs(i-avg1)*(abs(i-avg1)+1)//2 for i in inp]),
+                sum([abs(i-avg2)*(abs(i-avg2)+1)//2 for i in inp]))
     # output
 
     duration = int((time.time() - start_time) * 1000000)

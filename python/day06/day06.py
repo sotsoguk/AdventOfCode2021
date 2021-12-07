@@ -1,7 +1,7 @@
 import os
 import time
 import re
-from collections import defaultdict,Counter
+from collections import defaultdict, Counter
 
 
 def main():
@@ -17,12 +17,10 @@ def main():
         lines = f.read().splitlines()
     start_time = time.time()
     # parse input
-    inp = list(map(int,lines[0].split(',')))
-  
-    fish = defaultdict(int,Counter(inp))
-  
+    inp = list(map(int, lines[0].split(',')))
 
-    
+    fish = defaultdict(int, Counter(inp))
+
     days_1 = 80
     days = 256
     for i in range(days):
@@ -36,8 +34,7 @@ def main():
             else:
                 nextfish[d-1] += fish[d]
         fish = nextfish
-    
-   
+
     part2 = sum(fish.values())
     duration = int((time.time() - start_time) * 1000000)
     header = "*" * 20
