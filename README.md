@@ -1,6 +1,6 @@
-![](https://img.shields.io/badge/stars%20⭐-12-yellow)
-![](https://img.shields.io/badge/day%20📅-6-blue) 
-![](https://img.shields.io/badge/days%20completed-6-red)
+![](https://img.shields.io/badge/stars%20⭐-14-yellow)
+![](https://img.shields.io/badge/day%20📅-7-blue) 
+![](https://img.shields.io/badge/days%20completed-7-red)
 # Advent Of Code 2021
 
 This repository contains the solutions to the [Advent Of Code 2021](https://adventofcode.com/2021).
@@ -15,7 +15,7 @@ This repository contains the solutions to the [Advent Of Code 2021](https://adve
 | 04 | [Giant Squid](https://adventofcode.com/2021/day/4)| | [day04.py](https://github.com/sotsoguk/AdventOfCode2021/blob/6dc32bde011b2e3665575668c1499273fcd7f387/python/day04/day04.py) |
 | 05 | [Hydrothermal Venture](https://adventofcode.com/2021/day/5)| | [day05.py](https://github.com/sotsoguk/AdventOfCode2021/blob/69e007a29958b21b12605ed58ea351ccb0d8f3b5/python/day05/day05.py) |
 | 06 | [Lanternfish](https://adventofcode.com/2021/day/6)| | [day06.py ](https://github.com/sotsoguk/AdventOfCode2021/blob/36c224078a3370e5ea8383a74f71f1a334ed1077/python/day06/day06.py)| [Octave](https://github.com/sotsoguk/AdventOfCode2021/blob/36c224078a3370e5ea8383a74f71f1a334ed1077/misc/day06.m)|
-| 07 | | | |
+| 07 | [The Treachery of Whales](https://adventofcode.com/2021/day/7)| | |
 | 08 | | | |
 | 09 | | | |
 | 10 | | | |

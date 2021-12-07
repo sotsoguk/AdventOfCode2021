@@ -8,7 +8,7 @@ function retval = fish(d, inp)
    endfor
    M(7,1) = 1;
    M(9,1) = 1;
-   
+   M
    # build counter
    cnt = zeros(1,9);
    for i = 0:8
