@@ -17,8 +17,7 @@ def getN(x, y, rows, cols):
     return n
 
 
-def getNT(posyx, rows, cols):
-    return getN(posyx[1], posyx[0], rows, cols)
+
 
 
 def getBasin(hmap, x, y):
@@ -34,7 +33,8 @@ def getBasin(hmap, x, y):
         visited.add(currPos)
         basin.append(currPos)
         currVal = hmap[currPos]
-        ns = getNT(currPos, rows, cols)
+        
+        ns = getN(currPos[1],currPos[0],rows,cols)
         for n in ns:
             if hmap[n] > currVal and hmap[n] < 9:
                 q.append(n)
@@ -50,7 +50,7 @@ def main():
     inputFile = f'../inputs/day{day}.txt'
     # inputFile = f'../inputs/day{day}.txt'
 
-    part1, part2 = 0, 1
+    part1, part2 = 0, 0
     with open(inputFile) as f:
         lines = f.read().splitlines()
     start_time = time.time()
