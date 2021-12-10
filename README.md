@@ -1,6 +1,6 @@
-![](https://img.shields.io/badge/stars%20⭐-18-yellow)
-![](https://img.shields.io/badge/day%20📅-9-blue) 
-![](https://img.shields.io/badge/days%20completed-9-red)
+![](https://img.shields.io/badge/stars%20⭐-20-yellow)
+![](https://img.shields.io/badge/day%20📅-10-blue) 
+![](https://img.shields.io/badge/days%20completed-10-red)
 # Advent Of Code 2021
 
 This repository contains the solutions to the [Advent Of Code 2021](https://adventofcode.com/2021).
@@ -18,4 +18,4 @@ This repository contains the solutions to the [Advent Of Code 2021](https://adve
 | 07 | [The Treachery of Whales](https://adventofcode.com/2021/day/7)| | [day07.py](https://github.com/sotsoguk/AdventOfCode2021/blob/a6102d061994ce5dc1f5dddfa881b65cac40b209/python/day07/day07.py)| [day07.m](https://github.com/sotsoguk/AdventOfCode2021/blob/a6102d061994ce5dc1f5dddfa881b65cac40b209/misc/day07.m)| 
 | 08 | [Seven Segment Search](https://adventofcode.com/2021/day/8)| | |
 | 09 | | | |
-| 10 | | | |
+| 10 | [Syntax Scoring](https://adventofcode.com/2021/day/10)| | |
