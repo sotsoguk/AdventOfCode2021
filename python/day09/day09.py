@@ -36,7 +36,7 @@ def getBasin(hmap, x, y):
         
         ns = getN(currPos[1],currPos[0],rows,cols)
         for n in ns:
-            if hmap[n] > currVal and hmap[n] < 9:
+            if hmap[n] > currVal and hmap[n]  < 9:
                 q.append(n)
 
     return basin
