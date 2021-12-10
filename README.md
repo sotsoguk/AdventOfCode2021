@@ -17,5 +17,5 @@ This repository contains the solutions to the [Advent Of Code 2021](https://adve
 | 06 | [Lanternfish](https://adventofcode.com/2021/day/6)| | [day06.py ](https://github.com/sotsoguk/AdventOfCode2021/blob/36c224078a3370e5ea8383a74f71f1a334ed1077/python/day06/day06.py)| [day06.m](https://github.com/sotsoguk/AdventOfCode2021/blob/36c224078a3370e5ea8383a74f71f1a334ed1077/misc/day06.m)|
 | 07 | [The Treachery of Whales](https://adventofcode.com/2021/day/7)| | [day07.py](https://github.com/sotsoguk/AdventOfCode2021/blob/a6102d061994ce5dc1f5dddfa881b65cac40b209/python/day07/day07.py)| [day07.m](https://github.com/sotsoguk/AdventOfCode2021/blob/a6102d061994ce5dc1f5dddfa881b65cac40b209/misc/day07.m)| 
 | 08 | [Seven Segment Search](https://adventofcode.com/2021/day/8)| | |
-| 09 | | | |
-| 10 | [Syntax Scoring](https://adventofcode.com/2021/day/10)| | |
+| 09 | | [Smoke Basin](https://adventofcode.com/2021/day/9) | |[day09.py](https://github.com/sotsoguk/AdventOfCode2021/blob/main/python/day09/day09.py)
+| 10 | [Syntax Scoring](https://adventofcode.com/2021/day/10)| |[day10.py](https://github.com/sotsoguk/AdventOfCode2021/blob/main/python/day10/day10.py) |
