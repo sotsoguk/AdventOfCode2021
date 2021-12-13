@@ -13,7 +13,7 @@ def recDFS2(node,visited,adj,double_visit):
     # if node == 'start':
     #     return 0
     tmp = 0
-    print(node,visited,double_visit)
+    print(node,visited,double_visit,twice)
     if double_visit == True:
         if node.islower():
             visited.add(node)
@@ -21,13 +21,13 @@ def recDFS2(node,visited,adj,double_visit):
             if v == 'start':
                 continue
             if v not in visited:
-                tmp +=recDFS2(v,visited.copy(),adj,True)
+                tmp +=recDFS2(v,visited.copy(),adj,True,twice)
     else:
         if node == 'start':
             visited.add('start')
             for v in adj[node]:
                 
-                tmp +=recDFS2(v,visited.copy(),adj,False)
+                tmp +=recDFS2(v,visited.copy(),adj,False,[])
         else:
             if node.islower():
                 visited2 = visited.copy()
@@ -40,7 +40,7 @@ def recDFS2(node,visited,adj,double_visit):
                     if v == 'start':
                         continue
                 
-                    tmp += recDFS2(v,visited.copy(),adj,False)
+                    tmp += recDFS2(v,visited.copy(),adj,False,)
                     tmp += recDFS2(v,visited2.copy(),adj,True)
     return tmp
 def recDFS(node,visited,adj):
@@ -63,8 +63,8 @@ def main():
     print(os.getcwd())
     day = "12"
     year = "2021"
-    inputFile = f'../inputs/day{day}_test1.txt'
-    # inputFile = f'../inputs/day{day}.txt'
+    # inputFile = f'../inputs/day{day}_test2.txt'
+    inputFile = f'../inputs/day{day}.txt'
 
     part1, part2 = 0, 0
     with open(inputFile) as f:
@@ -74,14 +74,54 @@ def main():
     adj = defaultdict(list)
     for l in lines:
         u,v = l.split('-')
-        adj[u].append(v)
-        adj[v].append(u)
+        if v != 'start':
+            adj[u].append(v)
+        if u != 'start':
+            adj[v].append(u)
 
     print(adj)
-    visited = set()
-    visited.add('start')
-    part1 = recDFS('start',visited,adj)
-    part2 = recDFS2('start',visited,adj, False)
+    # visited = set()
+    # visited.add('start')
+    # part1 = recDFS('start',visited,adj)
+    # part2 = recDFS2('start',visited,adj, False,[])
+    # part1
+    p = [['start'],set(),False]
+    paths = []
+    paths.append(p)
+    while paths:
+        nodelist, visset, _ = paths.pop(0)
+        #print(nodelist,visset)
+        currNode = nodelist[-1]
+        if currNode == 'end':
+            part1 +=1
+        else:
+            for v in adj[currNode]:
+                if v.islower():
+                    if not v in visset:
+                        paths.append([nodelist + [v],visset | {v},False])
+                else:
+                    paths.append([nodelist + [v],visset,False])
+
+    # part2 
+    p = [['start'],set(),False]
+    paths = []
+    paths.append(p)
+    while paths:
+        nodelist, visset, revisited = paths.pop(0)
+        #print(nodelist,visset)
+        currNode = nodelist[-1]
+        if currNode == 'end':
+            part2 +=1
+        else:
+            for v in adj[currNode]:
+                if v.islower():
+                    if not v in visset:
+                        paths.append([nodelist + [v],visset | {v},revisited])
+                    else:
+                        if not revisited:
+                            paths.append([nodelist + [v],visset, True])
+                else:
+                    paths.append([nodelist + [v],visset,revisited])
     duration = int((time.time() - start_time) * 1000000)
     header = "!" * 20
     print(
