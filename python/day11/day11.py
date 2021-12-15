@@ -3,7 +3,7 @@ import queue
 import time
 from math import ceil, floor
 from queue import LifoQueue
-
+from collections import deque
 
 def main():
     # input
@@ -22,7 +22,7 @@ def main():
         # print(l)
         # print(l.split())
         grid.append(list(map(int,l)))
-
+    
     # part1 & part2
     rows, cols = len(lines), len(lines[0])
     print(rows,cols)
@@ -33,7 +33,7 @@ def main():
         if all(sum(r)==0 for r in grid):
             part2 = i
             break
-        q = []
+        q = deque()
         for r in range(rows):
             for c in range(cols):
                 # print(r,c,grid[r][c])
@@ -42,7 +42,7 @@ def main():
                     q.append((r,c))
         # flashes
         while len(q) > 0:
-            r,c = q.pop(0)
+            r,c = q.popleft()
             grid[r][c] = 0
             part1 += 1
             # determine neighbors
